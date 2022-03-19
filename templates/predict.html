@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <title>Final Result of Alzhiemer's Disease Prediction</title>
+  </head>
+
+  <body style="background-color:#d7fffa">
+    <h1><div style="text-align:center"><font color="blue">Prediction Result</font></div></h1>
+    <hr>
+    <div class="card text-center" style="width:21.5em;margin:0 auto;">
+      <div class="card-body">
+        <p class="card text"><h1><font color="maroon">Predicting......</font></h1></p>
+        </div>
+        </div>
+        <div class="results">
+          {% if predicting==1 %}
+            <h1>Final Result: <div class="p-3 mb-2 bg-danger" style="text-align:center" class="font-weight-bold"><br><span class='danger'> <font color="#FF0000" size=22> Opps! Your scores are indicating that you have Alzhiemers.</font></span></br></div></h1>
+          {% elif predicting==0 %}
+            <h1>Final Result: <div class="p-3 mb-2 bg-success" style="text-align:center" class="font-weight-bold"><br><span class='safe'><font color="#00FF00" size=22></font>Hurrah !!! We haven't detected any alzhiemers.</font></span></br></div></h1>
+          {% endif %}
+        </div>
+    
+  </body>
+
+</html>

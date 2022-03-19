@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <title>Alzhiemer's Detection using ML</title>
+    </head>
+
+    <body style="background-color:#f7c7cf">
+    <h1><div style="text-align:center"><font color="blue">Alzhiemer's Detection</font></div></h1>
+    <hr>
+    </br>
+    <h2><div style="text-align:center">Enter the values for MMSE,eTIV,nWBV,ASF</div></h2>
+    </br>
+    <div class='container'>
+        <div class='row'>
+        <div class='col-6'>
+            <form method="POST" action="/predict">
+            <div class="form-group">
+                <label for="MMSE"><p class="font-weight-bold"><font color="black" size=4>MMSE</font></p></label>
+                <input type="text" class="form-control" name="MMSE" placeholder="Enter values for MMSE such as 27,30 etc">
+                <small id="MMSE_Score" class="form-text text-muted"><br><font color="#2B547E" size=2>The Mini-Mental State Exam (MMSE) is a widely used test of cognitive function among the elderly, it includes tests of orientation, attention, memory, language and visual-spatial skills. The maximum MMSE score is 30 points. A score of 20 to 24 suggests mild dementia, 13 to 20 suggests moderate dementia, and less than 12 indicates severe dementia.
+                </font></br></smal>
+            </div>
+
+            <div class="form-group">
+                <label for="eTIV"><p class="font-weight-bold"><font color="black" size=4>eTIV</font></p></label>
+                <input type="text" class="form-control" name="eTIV" placeholder="Enter values for eTIV such as 1106.6, 2004 etc">
+                <small id="eTIV_Score" class="form-text text-muted"><br><font color="#2B547E" size=2>Estimated Total intracranial volume (eTIV), is the estimated measurement of Total Intracranial Volume (TIV) of the brain which is commonly used in studies related to the volume inside the cranium (skull). The ICV (intracranial volume) is often opted over the brain volume as it is an ethical measure of premorbid brain area (It determines the volume of the brain which is affected by Alzheimer's disease)
+                </font></br></small>
+            </div>
+
+            <div class="form-group">
+                <label for="nWBV"><p class="font-weight-bold"><font color="black" size=4>nWBV</font></p></label>
+                <input type="text" class="form-control" name="nWBV" placeholder="Enter values for eTIV such as 0.69,0.80 etc">
+                <small id="nWBV_Score" class="form-text text-muted"><br><font color="#2B547E" size=2>Normalised Whole Brain Volume (nWBV), considers the collective volume of the entire brain which is often measured and normalized with TIVs (Total Intra-cranial Volume). It has been found out that it significantly reduces in people with AD.
+                </font></br></small>
+            </div>
+
+            <div class="form-group">
+                    <label for="ASF"><p class="font-weight-bold"><font color="black" size=4>ASF</font></p></label>
+                    <input type="text" class="form-control" name="ASF" placeholder="Enter values for ASF such as 1.29,0.88 etc">
+                    <small id="ASF_Score" class="form-text text-muted"><br><font color="#2B547E" size=2>Atlas Scaling Factor also known as ASF, is the volume scaling element that equates the head sizes of different individuals as allows the comparison of the eTIV. It should be proportional to the Estimated Total intracranial volume (eTIV).
+                    </font></br></small>
+            </div>
+                <input class='btn btn-primary' type='submit' value='Submit'>
+            </form>
+
+        </div>
+        </div>
+    </div>
+    </body>
+
+</html>
